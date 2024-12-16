@@ -1,0 +1,106 @@
+<h1>Calendar</h1>
+<div class="row table">
+    @for(day of calendar; track day) {
+        <div class="day col-12" [class]="day.weekend ? (day.today ? 'col-md-1 today' : 'col-md-1') : (day.today ? 'col-md-2 today' : 'col-md-2')">
+            <div class="d-none d-md-block">
+                {{day.dateStr}}
+            </div>
+            <div class="d-md-none">
+                {{day.dateStrFull}}
+            </div>
+            @for(event of day.events; track event) {
+                <div>
+                    @if(event.type == 'lecture' || event.type =='discussion') {
+                        <div class="event {{event.type}}">
+                            <div class="title">
+                                @if(event.link) {
+                                    <a [href]="event.link" target="_blank">{{event.title}}</a>
+                                }
+                                @else {
+                                    <span>{{event.title}}</span>
+                                }
+                            </div>
+                            @for(place of event.places; track place) {
+                                <div>
+                                    <span>{{place.timeStr}} | </span>
+                                    @if(place.link) {
+                                        <a [href]="place.link">{{place.location}}</a>   
+                                    }
+                                    @else {
+                                        <span>{{place.location}}</span>
+                                    }
+                                </div>
+                            }
+                            @if(event.demo) {
+                                <div><a [href]="event.demo">Demo Code</a></div>
+                            }
+                            @if(event.recording) {
+                                <div><a [href]="event.recording" target="_blank">Recording</a></div>
+                            }
+                        </div>
+                    }
+                    @else if(event.type == 'officehours_daniel' || event.type == 'officehours_ziqi' || event.type == 'officehours_sohyeon' || event.type == 'officehours_weijun' || event.type == 'officehours_emily') {
+                        <div class="event {{event.type}}">
+                            @if(event.title) {
+                                <div class="title">
+                                    {{event.title}}
+                                </div>
+                            }
+                            @else {
+                                <div class="title">
+                                    {{event.label}}
+                                </div>
+                            }
+                            @for(place of event.places; track place) {
+                                <div>
+                                    <span>{{place.timeStr}} | </span>
+                                    @if(place.link) {
+                                        <span><a [href]="place.link">{{place.location}}</a></span>
+                                    }
+                                    @else {
+                                        <span>{{place.location}}</span>
+                                    }
+                                </div>
+                            }
+                        </div>
+                    }
+                    @else if (event.type == 'holiday' || event.type == 'absence') {
+                        <div class="event {{event.type}}">
+                            <div class="title">
+                                {{event.title}}
+                            </div>
+                        </div>
+                    }
+                    @else if (event.type == 'assignment') {
+                        <div class="event {{event.type}}">
+                            <div class="title">
+                                @if(event.link) {
+                                    <a [href]="event.link">{{event.title}} Due</a>
+                                }
+                                @else {
+                                    <span>{{event.title}} Due</span>
+                                }
+                            </div>
+                            <div>
+                                {{event.name}}
+                            </div>
+                        </div>
+                    }
+                    @else if (event.type == 'quiz') {
+                        <div class="event {{event.type}}">
+                            <div class="title">
+                                {{event.title}}
+                                <div>
+                                    {{event.name}}
+                                </div>
+                            </div>
+                            @for(place of event.places; track place) {
+                                <div>{{place.timeStr}} | {{place.location}}</div>
+                            }
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    }
+</div>

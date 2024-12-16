@@ -1,0 +1,230 @@
+{
+	"defaults": {
+		"lecture" : {
+			"place": {
+					"time": "08:00",
+					"duration": "80",
+					"label": "Lecture",
+					"location": "SSLH 100"
+				}
+		},
+		"discussion" : {
+			"place": [
+				{
+					"time": "12:00",
+					"duration": "50",
+					"location": "MSTB 118"
+				},
+				{
+					"time": "13:00",
+					"duration": "50",
+					"location": "MSTB 120"
+				},
+				{
+					"time": "14:00",
+					"duration": "50",
+					"location": "MSTB 120"
+				}
+			]
+		},
+		"assignment" : {
+			"due": "23:59"
+		},
+		"quiz" : {
+			"place": null
+		}
+	},
+	"events" : [
+		{
+			"date": "2025-01-07",
+			"type": "lecture",
+			"title": "Introduction & History"
+		},
+		{
+			"date": "2025-01-09",
+			"type": "lecture",
+			"title": "HTML & Accessibility"
+		},
+		{
+			"date": "2025-01-10",
+			"type": "discussion",
+			"title": "Git and GitHub Tutorial"
+		},
+		{
+			"date": "2025-01-14",
+			"type": "lecture",
+			"title": "CSS"
+		},
+		{
+			"date": "2025-01-16",
+			"type": "lecture",
+			"title": "Responsive Design & Javascript 1"
+		},
+		{
+			"date": "2025-01-17",
+			"type": "discussion",
+			"title": "TBD, maybe office hours?"
+		},
+		{
+			"date": "2025-01-20",
+			"type": "holiday",
+			"title": "Martin Luther King Day"
+		},
+		{
+			"date": "2025-01-21",
+			"type": "lecture",
+			"title": "JavaScript 2"
+		},
+		{
+			"date": "2025-01-22",
+			"type": "assignment",
+			"title": "A1",
+			"name": "Responsive Portfolio in HTML and CSS",
+			"link": "assignments/a1"
+		},
+		{
+			"date": "2025-01-23",
+			"type": "lecture",
+			"title": "DOM Manipulation & Package Management"
+		},
+		{
+			"date": "2025-01-24",
+			"type": "discussion",
+			"title": "Javascript Demo"
+		},
+		{
+			"date": "2025-01-28",
+			"type": "lecture",
+			"title": "TypeScript & Data Visualization Tools"
+		},
+		{
+			"date": "2025-01-30",
+			"type": "lecture",
+			"title": "AJAX, Fetch, & Promises"
+		},
+		{
+			"date": "2025-01-31",
+			"type": "discussion",
+			"title": "Vega-Lite Demo"
+		},
+		{
+			"date": "2025-02-04",
+			"type": "lecture",
+			"title": "Server-Side Development, Authentication, and Authorization"
+		},
+		{
+			"date": "2025-02-05",
+			"type": "assignment",
+			"title": "A2",
+			"name": "Runkeeper Tweet Report in JavaScript and TypeScript"
+		},
+		{
+			"date": "2025-02-06",
+			"type": "lecture",
+			"title": "Components in Angular"
+		},
+		{
+			"date": "2025-02-07",
+			"type": "discussion",
+			"title": "Angular Demo"
+		},
+		{
+			"date": "2025-02-11",
+			"type": "lecture",
+			"title": "Separation in Angular & Modeling Human Performance"
+		},
+		{
+			"date": "2025-02-13",
+			"type": "lecture",
+			"title": "Hybrid & Native Architectures"
+		},
+		{
+			"date": "2025-02-14",
+			"type": "discussion",
+			"title": "TA Office Hours"
+		},
+		{
+			"date": "2025-02-17",
+			"type": "holiday",
+			"title": "President's Day"
+		},
+		{
+			"date": "2025-02-18",
+			"type": "lecture",
+			"title": "Ionic Components"
+		},
+		{
+			"date": "2025-02-20",
+			"type": "lecture",
+			"title": "Mobile Design Principles & SASS"
+		},
+		{
+			"date": "2025-02-21",
+			"type": "assignment",
+			"title": "A3",
+			"name": "Spotify Browser in Angular"
+		},
+		{
+			"date": "2025-02-21",
+			"type": "discussion",
+			"title": "TBD"
+		},
+		{
+			"date": "2025-02-25",
+			"type": "lecture",
+			"title": "Device Resources & Sensors"
+		},
+		{
+			"date": "2025-02-27",
+			"type": "lecture",
+			"title": "Databases and Local Storage"
+		},
+		{
+			"date": "2025-02-28",
+			"type": "discussion",
+			"title": "Ionic Demo"
+		},
+		{
+			"date": "2025-03-04",
+			"type": "lecture",
+			"title": "Small & Large Displays"
+		},
+		{
+			"date": "2025-03-06",
+			"type": "lecture",
+			"title": "Augmenting Reality & Conversation"
+		},
+		{
+			"date": "2025-03-07",
+			"type": "assignment",
+			"title": "A4",
+			"name": "Sleep Tracker in Ionic"
+		},
+		{
+			"date": "2025-03-07",
+			"type": "discussion",
+			"title": "TBD"
+		},
+		{
+			"date": "2025-03-11",
+			"type": "lecture",
+			"title": "Interaction and Society"
+		},
+		{
+			"date": "2025-03-13",
+			"type": "lecture",
+			"title": "Wrap-up"
+		},
+		{
+			"date": "2025-03-14",
+			"type": "discussion",
+			"title": "TBD"
+		},
+		{
+			"date": "2025-03-19",
+			"type": "assignment",
+			"title": "A5",
+			"name": "Beyond Web & Mobile"
+		}
+	]
+}

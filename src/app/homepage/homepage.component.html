@@ -1,0 +1,71 @@
+<div class="row">
+	<aside class="col-md-3 col-12">
+		<h2>Basic Information</h2>
+		<p>Lecture: TuTh 8:00-9:20am, SSLH 100</p>
+		<p>Discussion: Fr 12:00-12:50pm, MSTB 118<br>Fr 1:00-1:50pm, MSTB 120<br>Fr 2:00-2:50pm, MSTB 120</p>
+		<p>Office Hours: TBD</p>
+		<p>Slack: <a href="https://uci-inf-133-wi25.slack.com">https://uci-inf-133-wi25.slack.com</a></p>
+		<p>Email: <a href="mailto:informatics-133-staff@uci.edu">informatics-133-staff&#64;uci.edu</a></p>
+		<h2>Upcoming Due Dates</h2>
+		@for (event of assignments_and_quizzes; track event.dateStr) {
+            <p>
+                @if (event.link) {
+                    <a [href]="event.link">{{event.dateStr}}: {{event.title}}</a>
+                }
+				@else {
+					<span>{{event.dateStr}}: {{event.title}}</span>
+				}
+            </p>
+        }
+        @if (assignments_and_quizzes.length == 0) {
+            <p>No more!</p>
+        }
+		<h2>Recent Lectures & Discussions</h2>
+        @for (event of lectures; track event.dateStr) {
+            <p>
+                {{event.dateStr}}: {{event.title}}
+                @if(event.link) {
+                    <a [href]="event.link"> (slides)</a>
+                }
+                @if(event.recording){
+                    <a [href]="event.recording"> (recording)</a>
+                }
+            </p>
+        }
+        @if(lectures.length == 0) {
+            <p>
+                None yet!
+            </p>
+        }
+	</aside>
+	<main class="col-md-9 col-sm-12">
+		<p>Welcome! This class focuses on the programming and development of user interfaces, with a specific focus on modern web and mobile technology. We'll cover HTML, CSS, JavaScript, TypeScript, Angular, and Ionic along the way, growing an understanding of what each of these technologies provides and affords. Coming out of this class, students should be able to weigh the strengths and weaknesses of different devices and development frameworks for a given task.</p>
+        <h2>Course Staff</h2>
+    	<div class="row">
+    		<div class="col-4">
+    			<p>Professor Daniel Epstein</p>
+    			<img class="d-none d-lg-block" src="/images/epstein.jpg" alt="picture of Professor Epstein" width="200px">
+    		</div>
+    		<div class="col-4">
+    			<p>TA Weijun Li</p>
+    			<img class="d-none d-lg-block" src="/images/weijun.jpg" alt="picture of Weijun Li" width="200px">
+    		</div>
+            <div class="col-4">
+    			<p>TA Sohyeon Park</p>
+    			<img class="d-none d-lg-block" src="/images/sohyeon.jpg" alt="picture of Sohyeon Park" width="200px">
+    		</div>
+    		<div class="col-4">
+    			<p>TA Ziqi Yang</p>
+    			<img class="d-none d-lg-block" src="/images/ziqi.jpg" alt="picture of Ziqi Yang" width="200px">
+    		</div>
+            <div class="col-4">
+    			<p>Reader Emily Wang</p>
+    			<img class="d-none d-lg-block" src="/images/tbd.jpg" alt="picture of Emily Wang" width="200px">
+    		</div>
+    	</div>
+        <h2>Repository</h2>
+        <p>This website is live on GitHub: 
+            <a href="https://github.com/uci-inf-133/inf133-wi25" target="_blank">https://github.com/uci-inf-133/inf133-wi25</a>
+        <p>You can create issues if information is unclear, incorrect, or out-of-date. You can even submit a pull request to resolve them yourself!</p>
+	</main>
+</div>

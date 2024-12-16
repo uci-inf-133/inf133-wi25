@@ -1,0 +1,2 @@
+ng build --configuration production
+ngh --dir dist/inf133-wi25 --cname=inf133-wi25.depstein.net
