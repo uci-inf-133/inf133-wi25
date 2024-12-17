@@ -1,2 +1,2 @@
 ng build --configuration production
-ng deploy --repo https://github.com/uci-inf-133/inf133-wi25.git --cname=inf133-wi25.depstein.net --dir=dist/inf133-wi25
+ng deploy --repo https://github.com/uci-inf-133/inf133-wi25.git --cname=inf133-wi25.depstein.net --dir=dist/inf133-wi25/browser
