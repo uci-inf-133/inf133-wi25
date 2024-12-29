@@ -18,7 +18,7 @@ export class CalendarComponent {
   }
 
   parseCalendar(calendar:any) {
-  	const typeOrder = ["holiday", "absence", "assignment", "quiz", "lecture", "discussion", "officehours_goda", "officehours_seolha", "officehours_daniel"]
+  	const typeOrder = ["holiday", "absence", "assignment", "quiz", "lecture", "discussion", "officehours_sohyeon", "officehours_weijun", "officehours_emily", "officehours_ziqi", "officehours_daniel"]
 
     let events:any[] = calendar['events'];
     //Add date string to each event
