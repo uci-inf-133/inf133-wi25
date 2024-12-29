@@ -27,6 +27,47 @@
 				}
 			]
 		},
+		"officehours_daniel": {
+			"place": {
+					"time": "13:00",
+					"duration": "60",
+					"label": "Professor Epstein Office Hours",
+					"location": "DBH 6093"
+				}
+		},
+		"officehours_sohyeon": {
+			"place": {
+					"time": "11:00",
+					"duration": "60",
+					"label": "Sohyeon Office Hours",
+					"location": "TBD"
+				}
+		},
+		"officehours_weijun": {
+			"place": {
+					"time": "16:00",
+					"duration": "60",
+					"label": "Weijun Office Hours",
+					"location": "TBD"
+				}
+		},
+		"officehours_ziqi": {
+			"place": {
+					"time": "14:00",
+					"duration": "60",
+					"label": "Ziqi Office Hours",
+					"location": "TBD"
+				}
+		},
+		"officehours_emily": {
+			"place": {
+					"time": "15:00",
+					"duration": "60",
+					"label": "Emily Office Hours",
+					"location": "Zoom",
+					"link": "https://uci.zoom.us/j/91759281801"
+				}
+		},
 		"assignment" : {
 			"due": "23:59"
 		},
@@ -48,7 +89,15 @@
 		{
 			"date": "2025-01-10",
 			"type": "discussion",
-			"title": "Git and GitHub Tutorial"
+			"title": "Git and GitHub Tutorial (Ziqi)"
+		},
+		{
+			"date": "2025-01-13",
+			"type": "officehours_sohyeon"
+		},
+		{
+			"date": "2025-01-13",
+			"type": "officehours_emily"
 		},
 		{
 			"date": "2025-01-14",
@@ -56,14 +105,22 @@
 			"title": "CSS"
 		},
 		{
+			"date": "2025-01-15",
+			"type": "officehours_ziqi"
+		},
+		{
 			"date": "2025-01-16",
 			"type": "lecture",
 			"title": "Responsive Design & Javascript 1"
 		},
 		{
+			"date": "2025-01-16",
+			"type": "officehours_weijun"
+		},
+		{
 			"date": "2025-01-17",
 			"type": "discussion",
-			"title": "TBD, maybe office hours?"
+			"title": "Probably TA office hours"
 		},
 		{
 			"date": "2025-01-20",
@@ -76,6 +133,10 @@
 			"title": "JavaScript 2"
 		},
 		{
+			"date": "2025-01-21",
+			"type": "officehours_daniel"
+		},
+		{
 			"date": "2025-01-22",
 			"type": "assignment",
 			"title": "A1",
@@ -83,9 +144,17 @@
 			"link": "assignments/a1"
 		},
 		{
+			"date": "2025-01-22",
+			"type": "officehours_ziqi"
+		},
+		{
 			"date": "2025-01-23",
 			"type": "lecture",
 			"title": "DOM Manipulation & Package Management"
+		},
+		{
+			"date": "2025-01-23",
+			"type": "officehours_weijun"
 		},
 		{
 			"date": "2025-01-24",
@@ -93,9 +162,25 @@
 			"title": "Javascript Demo"
 		},
 		{
+			"date": "2025-01-27",
+			"type": "officehours_sohyeon"
+		},
+		{
+			"date": "2025-01-27",
+			"type": "officehours_emily"
+		},
+		{
 			"date": "2025-01-28",
 			"type": "lecture",
 			"title": "TypeScript & Data Visualization Tools"
+		},
+		{
+			"date": "2025-01-28",
+			"type": "officehours_daniel"
+		},
+		{
+			"date": "2025-01-29",
+			"type": "officehours_ziqi"
 		},
 		{
 			"date": "2025-01-30",
@@ -103,14 +188,30 @@
 			"title": "AJAX, Fetch, & Promises"
 		},
 		{
+			"date": "2025-01-30",
+			"type": "officehours_weijun"
+		},
+		{
 			"date": "2025-01-31",
 			"type": "discussion",
 			"title": "Vega-Lite Demo"
 		},
 		{
+			"date": "2025-02-03",
+			"type": "officehours_sohyeon"
+		},
+		{
+			"date": "2025-02-03",
+			"type": "officehours_emily"
+		},
+		{
 			"date": "2025-02-04",
 			"type": "lecture",
 			"title": "Server-Side Development, Authentication, and Authorization"
+		},
+		{
+			"date": "2025-02-04",
+			"type": "officehours_daniel"
 		},
 		{
 			"date": "2025-02-05",
@@ -119,9 +220,17 @@
 			"name": "Runkeeper Tweet Report in JavaScript and TypeScript"
 		},
 		{
+			"date": "2025-02-05",
+			"type": "officehours_ziqi"
+		},
+		{
 			"date": "2025-02-06",
 			"type": "lecture",
 			"title": "Components in Angular"
+		},
+		{
+			"date": "2025-02-06",
+			"type": "officehours_weijun"
 		},
 		{
 			"date": "2025-02-07",
@@ -129,14 +238,34 @@
 			"title": "Angular Demo"
 		},
 		{
+			"date": "2025-02-10",
+			"type": "officehours_sohyeon"
+		},
+		{
+			"date": "2025-02-10",
+			"type": "officehours_emily"
+		},
+		{
 			"date": "2025-02-11",
 			"type": "lecture",
 			"title": "Separation in Angular & Modeling Human Performance"
 		},
 		{
+			"date": "2025-02-11",
+			"type": "officehours_daniel"
+		},
+		{
+			"date": "2025-02-12",
+			"type": "officehours_ziqi"
+		},
+		{
 			"date": "2025-02-13",
 			"type": "lecture",
 			"title": "Hybrid & Native Architectures"
+		},
+		{
+			"date": "2025-02-13",
+			"type": "officehours_weijun"
 		},
 		{
 			"date": "2025-02-14",
@@ -154,9 +283,21 @@
 			"title": "Ionic Components"
 		},
 		{
+			"date": "2025-02-18",
+			"type": "officehours_daniel"
+		},
+		{
+			"date": "2025-02-19",
+			"type": "officehours_ziqi"
+		},
+		{
 			"date": "2025-02-20",
 			"type": "lecture",
 			"title": "Mobile Design Principles & SASS"
+		},
+		{
+			"date": "2025-02-20",
+			"type": "officehours_weijun"
 		},
 		{
 			"date": "2025-02-21",
@@ -170,9 +311,25 @@
 			"title": "TBD"
 		},
 		{
+			"date": "2025-02-24",
+			"type": "officehours_sohyeon"
+		},
+		{
+			"date": "2025-02-24",
+			"type": "officehours_emily"
+		},
+		{
 			"date": "2025-02-25",
 			"type": "lecture",
 			"title": "Device Resources & Sensors"
+		},
+		{
+			"date": "2025-02-25",
+			"type": "officehours_daniel"
+		},
+		{
+			"date": "2025-02-26",
+			"type": "officehours_ziqi"
 		},
 		{
 			"date": "2025-02-27",
@@ -180,9 +337,21 @@
 			"title": "Databases and Local Storage"
 		},
 		{
+			"date": "2025-02-27",
+			"type": "officehours_weijun"
+		},
+		{
 			"date": "2025-02-28",
 			"type": "discussion",
 			"title": "Ionic Demo"
+		},
+		{
+			"date": "2025-03-03",
+			"type": "officehours_sohyeon"
+		},
+		{
+			"date": "2025-03-03",
+			"type": "officehours_emily"
 		},
 		{
 			"date": "2025-03-04",
@@ -190,9 +359,21 @@
 			"title": "Small & Large Displays"
 		},
 		{
+			"date": "2025-03-04",
+			"type": "officehours_daniel"
+		},
+		{
+			"date": "2025-03-05",
+			"type": "officehours_ziqi"
+		},
+		{
 			"date": "2025-03-06",
 			"type": "lecture",
 			"title": "Augmenting Reality & Conversation"
+		},
+		{
+			"date": "2025-03-06",
+			"type": "officehours_weijun"
 		},
 		{
 			"date": "2025-03-07",
@@ -206,14 +387,34 @@
 			"title": "TBD"
 		},
 		{
+			"date": "2025-03-10",
+			"type": "officehours_sohyeon"
+		},
+		{
+			"date": "2025-03-10",
+			"type": "officehours_emily"
+		},
+		{
 			"date": "2025-03-11",
 			"type": "lecture",
 			"title": "Interaction and Society"
 		},
 		{
+			"date": "2025-03-11",
+			"type": "officehours_daniel"
+		},
+		{
+			"date": "2025-03-12",
+			"type": "officehours_ziqi"
+		},
+		{
 			"date": "2025-03-13",
 			"type": "lecture",
 			"title": "Wrap-up"
+		},
+		{
+			"date": "2025-03-13",
+			"type": "officehours_weijun"
 		},
 		{
 			"date": "2025-03-14",
