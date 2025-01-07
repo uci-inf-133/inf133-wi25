@@ -79,7 +79,9 @@
 		{
 			"date": "2025-01-07",
 			"type": "lecture",
-			"title": "Introduction & History"
+			"title": "Introduction & History",
+			"link": "lectures/01_07_25-introduction_history.pdf",
+			"recording": "https://uci.yuja.com/V/Video?v=12090133&a=108683771"
 		},
 		{
 			"date": "2025-01-09",
