@@ -40,7 +40,7 @@
 					"time": "11:00",
 					"duration": "60",
 					"label": "Sohyeon Office Hours",
-					"location": "TBD"
+					"location": "DBH 5221"
 				}
 		},
 		"officehours_weijun": {
@@ -48,7 +48,7 @@
 					"time": "16:00",
 					"duration": "60",
 					"label": "Weijun Office Hours",
-					"location": "TBD"
+					"location": "DBH 5221"
 				}
 		},
 		"officehours_ziqi": {
@@ -56,7 +56,7 @@
 					"time": "14:00",
 					"duration": "60",
 					"label": "Ziqi Office Hours",
-					"location": "TBD"
+					"location": "DBH 5221"
 				}
 		},
 		"officehours_emily": {
@@ -219,7 +219,8 @@
 			"date": "2025-02-05",
 			"type": "assignment",
 			"title": "A2",
-			"name": "Runkeeper Tweet Report in JavaScript and TypeScript"
+			"name": "Runkeeper Tweet Report in JavaScript and TypeScript",
+			"link": "assignments/a2"
 		},
 		{
 			"date": "2025-02-05",
