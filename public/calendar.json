@@ -86,7 +86,8 @@
 		{
 			"date": "2025-01-09",
 			"type": "lecture",
-			"title": "HTML & Accessibility"
+			"title": "HTML & Accessibility",
+			"link": "lectures/01_09_25-html_accessibility.pdf"
 		},
 		{
 			"date": "2025-01-10",
