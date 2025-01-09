@@ -87,12 +87,15 @@
 			"date": "2025-01-09",
 			"type": "lecture",
 			"title": "HTML & Accessibility",
-			"link": "lectures/01_09_25-html_accessibility.pdf"
+			"link": "lectures/01_09_25-html_accessibility.pdf",
+			"demo": "demos/01_09_25-html_accessibility.zip",
+			"recording": "https://uci.yuja.com/V/Video?v=12099765&a=189531404"
 		},
 		{
 			"date": "2025-01-10",
 			"type": "discussion",
-			"title": "Git and GitHub Tutorial (Ziqi)"
+			"title": "Git and GitHub Tutorial (Ziqi)",
+			"link": "discussions/01_10_25-git_github.pdf"
 		},
 		{
 			"date": "2025-01-13",
