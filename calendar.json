@@ -108,7 +108,9 @@
 		{
 			"date": "2025-01-14",
 			"type": "lecture",
-			"title": "CSS"
+			"title": "CSS",
+			"link": "lectures/01_14_25-css.pdf",
+			"demo": "demos/01_14_25-css.zip"
 		},
 		{
 			"date": "2025-01-15",
@@ -117,7 +119,9 @@
 		{
 			"date": "2025-01-16",
 			"type": "lecture",
-			"title": "Responsive Design & Javascript 1"
+			"title": "Responsive Design & Javascript 1",
+			"link": "lectures/01_16_25-responsive_javascript.pdf",
+			"demo": "demos/01_16_25-responsive_javascript.zip"
 		},
 		{
 			"date": "2025-01-16",
