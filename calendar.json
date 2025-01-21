@@ -189,7 +189,9 @@
 		{
 			"date": "2025-01-28",
 			"type": "lecture",
-			"title": "TypeScript & Data Visualization Tools"
+			"title": "TypeScript & Data Visualization Tools",
+			"link": "lectures/01_28_25-typescript_visualization.pdf",
+			"demo": "demos/01_28_25-typescript_visualization.zip"
 		},
 		{
 			"date": "2025-01-28",
@@ -202,7 +204,9 @@
 		{
 			"date": "2025-01-30",
 			"type": "lecture",
-			"title": "AJAX, Fetch, & Promises"
+			"title": "AJAX, Fetch, & Promises",
+			"link": "lectures/01_30_25-ajax_fetch_promises.pdf",
+			"demo": "demos/01_30_25-ajax_fetch_promises.zip"
 		},
 		{
 			"date": "2025-01-30",
