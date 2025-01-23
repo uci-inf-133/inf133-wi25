@@ -167,7 +167,8 @@
 			"type": "lecture",
 			"title": "DOM Manipulation & Package Management",
 			"link": "lectures/01_23_25-dom_package.pdf",
-			"demo": "demos/01_23_25-dom_package.zip"
+			"demo": "demos/01_23_25-dom_package.zip",
+			"recording": "https://uci.yuja.com/V/Video?v=12200226&a=131243593"
 		},
 		{
 			"date": "2025-01-23",
