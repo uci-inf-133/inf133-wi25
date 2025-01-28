@@ -193,7 +193,8 @@
 			"type": "lecture",
 			"title": "TypeScript & Data Visualization Tools",
 			"link": "lectures/01_28_25-typescript_visualization.pdf",
-			"demo": "demos/01_28_25-typescript_visualization.zip"
+			"demo": "demos/01_28_25-typescript_visualization.zip",
+			"recording": "https://uci.yuja.com/V/Video?v=12246058&a=130485042"
 		},
 		{
 			"date": "2025-01-28",
@@ -217,7 +218,7 @@
 		{
 			"date": "2025-01-31",
 			"type": "discussion",
-			"title": "Vega-Lite Demo"
+			"title": "Vega-Lite Demo (Ziqi)"
 		},
 		{
 			"date": "2025-02-03",
@@ -230,7 +231,9 @@
 		{
 			"date": "2025-02-04",
 			"type": "lecture",
-			"title": "Server-Side Development, Authentication, and Authorization"
+			"title": "Server-Side Development, Authentication, and Authorization",
+			"link": "lectures/02_04_25-server_authentication.pdf",
+			"demo": "demos/02_04_25-server_authentication.zip"
 		},
 		{
 			"date": "2025-02-04",
@@ -250,7 +253,9 @@
 		{
 			"date": "2025-02-06",
 			"type": "lecture",
-			"title": "Components in Angular"
+			"title": "Components in Angular",
+			"link": "lectures/02_06_25-angular_components.pdf",
+			"demo": "demos/02_06_25-angular_components.zip"
 		},
 		{
 			"date": "2025-02-06",
@@ -259,7 +264,7 @@
 		{
 			"date": "2025-02-07",
 			"type": "discussion",
-			"title": "Angular Demo"
+			"title": "Angular Demo (Weijun)"
 		},
 		{
 			"date": "2025-02-10",
@@ -294,7 +299,7 @@
 		{
 			"date": "2025-02-14",
 			"type": "discussion",
-			"title": "TA Office Hours"
+			"title": "TA Office Hours (Sohyeon)"
 		},
 		{
 			"date": "2025-02-17",
