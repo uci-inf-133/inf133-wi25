@@ -209,7 +209,8 @@
 			"type": "lecture",
 			"title": "AJAX, Fetch, & Promises",
 			"link": "lectures/01_30_25-ajax_fetch_promises.pdf",
-			"demo": "demos/01_30_25-ajax_fetch_promises.zip"
+			"demo": "demos/01_30_25-ajax_fetch_promises.zip",
+			"recording": "https://uci.yuja.com/V/Video?v=12264167&a=109298557"
 		},
 		{
 			"date": "2025-01-30",
@@ -426,7 +427,7 @@
 		{
 			"date": "2025-03-11",
 			"type": "lecture",
-			"title": "Interaction and Society"
+			"title": "Prototyping in Research"
 		},
 		{
 			"date": "2025-03-11",
