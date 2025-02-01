@@ -279,7 +279,9 @@
 		{
 			"date": "2025-02-11",
 			"type": "lecture",
-			"title": "Separation in Angular & Modeling Human Performance"
+			"title": "Separation in Angular & Modeling Human Performance",
+			"link": "lectures/02_11_25-angular_separation_human_performance.pdf",
+			"demo": "demos/02_11_25-angular_separation_human_performance.zip"
 		},
 		{
 			"date": "2025-02-11",
@@ -292,7 +294,8 @@
 		{
 			"date": "2025-02-13",
 			"type": "lecture",
-			"title": "Hybrid & Native Architectures"
+			"title": "Hybrid & Native Architectures",
+			"link": "lectures/02_13_25-hybrid_native.pdf"
 		},
 		{
 			"date": "2025-02-13",
