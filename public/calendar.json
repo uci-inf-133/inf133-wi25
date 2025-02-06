@@ -258,7 +258,8 @@
 			"type": "lecture",
 			"title": "Components in Angular",
 			"link": "lectures/02_06_25-angular_components.pdf",
-			"demo": "demos/02_06_25-angular_components.zip"
+			"demo": "demos/02_06_25-angular_components.zip",
+			"recording": "https://uci.yuja.com/V/Video?v=12317342&a=62185137"
 		},
 		{
 			"date": "2025-02-06",
