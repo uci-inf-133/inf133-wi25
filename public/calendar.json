@@ -284,7 +284,8 @@
 			"type": "lecture",
 			"title": "Separation in Angular & Modeling Human Performance",
 			"link": "lectures/02_11_25-angular_separation_human_performance.pdf",
-			"demo": "demos/02_11_25-angular_separation_human_performance.zip"
+			"demo": "demos/02_11_25-angular_separation_human_performance.zip",
+			"recording": "https://uci.yuja.com/V/Video?v=12356378&a=117364963"
 		},
 		{
 			"date": "2025-02-11",
@@ -317,7 +318,9 @@
 		{
 			"date": "2025-02-18",
 			"type": "lecture",
-			"title": "Ionic Components"
+			"title": "Ionic Components",
+			"link": "lectures/02_18_25-ionic_components.pdf",
+			"demo": "demos/02_18_25-ionic_components.zip"
 		},
 		{
 			"date": "2025-02-18",
@@ -330,7 +333,8 @@
 		{
 			"date": "2025-02-20",
 			"type": "lecture",
-			"title": "Mobile Design Principles & SASS"
+			"title": "Mobile Design Principles & SASS",
+			"demo": "demos/02_20_25-mobile_sass.zip"
 		},
 		{
 			"date": "2025-02-20",
