@@ -299,11 +299,24 @@
 			"date": "2025-02-13",
 			"type": "lecture",
 			"title": "Hybrid & Native Architectures",
-			"link": "lectures/02_13_25-hybrid_native.pdf"
+			"link": "lectures/02_13_25-hybrid_native.pdf",
+			"place": {
+				"time": "08:00",
+				"duration": "80",
+				"location": "Zoom",
+				"link": "https://uci.zoom.us/j/6990509624?omn=96161906599"
+			}
 		},
 		{
 			"date": "2025-02-13",
-			"type": "officehours_weijun"
+			"type": "officehours_weijun",
+			"place": {
+				"label": "Weijun Office Hours",
+				"time": "16:00",
+				"duration": "60",
+				"location": "Zoom",
+				"link": "https://uci.zoom.us/j/3013304461"
+			}
 		},
 		{
 			"date": "2025-02-14",

@@ -64,6 +64,9 @@ export class CalendarComponent {
 				}
 				if(Array.isArray(calendar['defaults'][event.type]["place"])) {
 					ev.places = calendar['defaults'][event.type]["place"].map((place:any) => {
+						if('place' in event) {
+							place = event.place;
+						}
 						var start_time = moment(event.date + " " + place.time);
 						if("time" in event) {
 							start_time = moment(event.date + " " + event.time);
@@ -102,6 +105,10 @@ export class CalendarComponent {
 					}
 				} else {
 					var place = calendar['defaults'][event.type]["place"];
+					if('place' in event) {
+						console.log(event);
+						place = event.place;
+					}
 					var start_time:any = moment(event.date + " " + place.time);
 					var loc = place.location;
 					if("time" in event) {
