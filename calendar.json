@@ -393,7 +393,9 @@
 		{
 			"date": "2025-02-27",
 			"type": "lecture",
-			"title": "Databases and Local Storage"
+			"title": "Databases and Local Storage",
+			"link": "lectures/02_27_25-databases.pdf",
+			"demo": "demos/02_27_25-databases.zip"
 		},
 		{
 			"date": "2025-02-27",
