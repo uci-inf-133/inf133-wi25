@@ -350,7 +350,8 @@
 			"type": "lecture",
 			"title": "Mobile Design Principles & SASS",
 			"link": "lectures/02_20_25-mobile_sass.pdf",
-			"demo": "demos/02_20_25-mobile_sass.zip"
+			"demo": "demos/02_20_25-mobile_sass.zip",
+			"recording": "https://uci.yuja.com/V/Video?v=12423618&a=54178388"
 		},
 		{
 			"date": "2025-02-20",
