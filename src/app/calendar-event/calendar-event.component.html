@@ -1,0 +1,33 @@
+<div class="event {{event.type}}">
+    <div class="title">
+        @if(event.link) {
+            <a [href]="event.link" target="_blank">{{event.title}} @if(event.type == 'assignment'){Due}</a>
+        } @else {
+            <span>{{event.title}} @if(event.type == 'assignment'){Due}</span>
+        }
+    </div>
+    @for(place of event.places; track place.timeStr) {
+        <div>
+            @if(place.timeStr) {
+                <span>{{place.timeStr}} | </span>
+            }
+            @if(place.link) {
+                <a [href]="place.link">{{place.location}}</a>
+            }
+            @else {
+                <span>{{place.location}}</span>
+            }
+        </div>
+    }
+    @if(event.demo) {
+        <div><a [href]="event.demo">Demo Code</a></div>
+    }
+    @if(event.recording) {
+        <div><a [href]="event.recording" target="_blank">Recording</a></div>
+    }
+    @if(event.name) {
+        <div>
+            {{event.name}}
+        </div>
+    }
+</div>

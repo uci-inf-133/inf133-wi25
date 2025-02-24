@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import moment from 'moment';
+import { CalendarEventComponent } from '../calendar-event/calendar-event.component';
 
 @Component({
   selector: 'app-calendar',
-  imports: [],
+  imports: [CalendarEventComponent],
   templateUrl: './calendar.component.html',
   styleUrl: './calendar.component.css'
 })
 export class CalendarComponent {
   calendar:any[] = [];
+  defaults:any = {};
 
   constructor(private http:HttpClient) {
   	this.http.get('calendar.json').subscribe(calendar => {
@@ -17,152 +18,61 @@ export class CalendarComponent {
   	});
   }
 
+  //https://stackoverflow.com/questions/24500375/get-clients-gmt-offset-in-javascript
+  getTimezoneOffset() {
+	function z(n:any){return (n<10? '0' : '') + n}
+	var offset = new Date().getTimezoneOffset();
+	var sign = offset < 0? '+' : '-';
+	offset = Math.abs(offset);
+	return sign + z(offset/60 | 0) + z(offset%60);
+  }
+
   parseCalendar(calendar:any) {
-  	const typeOrder = ["holiday", "absence", "assignment", "quiz", "lecture", "discussion", "officehours_sohyeon", "officehours_weijun", "officehours_emily", "officehours_ziqi", "officehours_daniel"]
+  	const typeOrder = ["holiday", "absence", "assignment", "discussion", "lecture", "demo", "officehours_daniel", "officehours_weijun", "officehours_ziqi", "officehours_emily"];
 
     let events:any[] = calendar['events'];
-    //Add date string to each event
-    
-    events.sort((a, b) => {
-		return moment(a.date).diff(moment(b.date));
+	this.defaults = calendar['defaults'];
+    //Add date string to each event, specify that they're in Pacific time zone
+	//There's potentially some mess involving Daylight Savings, but hopefully that's dealt with...
+    events = events.map((event) => {
+		event.date = new Date(event.date + " GMT" + this.getTimezoneOffset());
+		return event;
 	});
-	var start_date = moment(events[0].date);
-	var end_date = moment(events[events.length - 1].date);
-	var calendar_start_date = moment(start_date).subtract(start_date.day(), "days");
-	var calendar_end_date = moment(end_date).subtract(end_date.day(), "days").add(1, "weeks");
+
+    events.sort((a, b) => {
+		return a.date > b.date ? 1 : 0;
+	});
+	let start_date = new Date(events[0].date);
+	let end_date = new Date(events[events.length - 1].date);
+	start_date.setDate(start_date.getDate() - start_date.getDay());
+	end_date.setDate(end_date.getDate() - end_date.getDay() + 6);
+	
 	var calendar_dates:any = [];
-	// Add each date between the first and last event
-	while(calendar_start_date.isBefore(calendar_end_date)) {
-		calendar_dates.push({
-			"month": calendar_start_date.month(),
-			"date": calendar_start_date.date(),
-			"weekday": calendar_start_date.weekday(),
-			"dateStr": calendar_start_date.format("MMM D"),
-			"dateStrFull": calendar_start_date.format("ddd MMM D"),
-			"today": calendar_start_date.isSame(moment(), 'day'),
-			"weekend": calendar_start_date.day() == 0 || calendar_start_date.day() == 6, //Saturday or Sunday
-			"events": []
+	let events_index = 0;
+
+	let today = new Date();
+    today.setHours(0, 0, 0, 0);
+	while(start_date <= end_date) {
+		let todays_events:any[] = [];
+		//Compare the date rather than the time to account for Daylight Savings
+		while(events_index < events.length && events[events_index].date.toLocaleDateString() == start_date.toLocaleDateString()) {
+			todays_events.push(events[events_index]);
+			events_index++;
+		}
+		todays_events.sort((a:any, b:any) => {
+			return typeOrder.indexOf(a.type) - typeOrder.indexOf(b.type);
 		});
-		calendar_start_date.add(1, "days");
+		calendar_dates.push({
+			date: start_date,
+			isToday: today.getTime() == start_date.getTime(),
+			isWeekend: start_date.getDay() == 0 || start_date.getDay() == 6,
+			dateStr: new Intl.DateTimeFormat("en-US", {month: "short", day: 'numeric'}).format(start_date),
+			events: todays_events
+		});
+		start_date = new Date(start_date);
+		start_date.setDate(start_date.getDate() + 1);
 	}
-	//Add events for each date
-	var eventI = 0;
-	for(var calendarI = 0; calendarI < calendar_dates.length; ) {
-		if(eventI >= events.length) {
-			calendarI++;
-			continue;
-		}
-		var event = events[eventI];
-		var calendar_date = calendar_dates[calendarI];
-		var eventDate = moment(event.date);
-		if(calendar_date.month == eventDate.month() && calendar_date.date == eventDate.date()) {
-			var eventsToPush:any[] = [];
-			//Add defaults
-			if(event.type in calendar['defaults'] && "place" in calendar['defaults'][event.type]) {
-				var ev:any = {
-					"places": []
-				}
-				if(Array.isArray(calendar['defaults'][event.type]["place"])) {
-					ev.places = calendar['defaults'][event.type]["place"].map((place:any) => {
-						if('place' in event) {
-							place = event.place;
-						}
-						var start_time = moment(event.date + " " + place.time);
-						if("time" in event) {
-							start_time = moment(event.date + " " + event.time);
-						}
-						var end_time = moment(start_time).add(place.duration, "minutes");
-						if("duration" in event) {
-							end_time = moment(start_time).add(event.duration, "minutes");
-						}
-						return {
-							"timeStr": start_time.format("h:mm") + "-" + end_time.format("h:mm"),
-							"location": "location" in event ? event.location : place.location,
-							"link": place.link ? place.link : null
-						};
-					});
-					if("time" in event && "duration" in event) {
-						ev.places = [ev.places[0]];
-					}
-				} else if(!calendar['defaults'][event.type]["place"]) {
-					var start_time = null
-					if("time" in event) {
-						start_time = moment(event.date + " " + event.time);
-					}
-					var end_time = null;
-					if("duration" in event) {
-						end_time = moment(start_time).add(event.duration, "minutes");
-					}
-					if("location" in event) {
-						loc = event.location;
-					}
-					if(start_time && end_time) {
-						ev.places.push({
-							"timeStr": [start_time.format("h:mm") + "-" + end_time.format("h:mm")],
-							"location": [loc],
-							"link": place.link ? place.link : null
-						});
-					}
-				} else {
-					var place = calendar['defaults'][event.type]["place"];
-					if('place' in event) {
-						console.log(event);
-						place = event.place;
-					}
-					var start_time:any = moment(event.date + " " + place.time);
-					var loc = place.location;
-					if("time" in event) {
-						start_time = moment(event.date + " " + event.time);
-					}
-					var end_time:any = moment(start_time).add(place.duration, "minutes");
-					if("duration" in event) {
-						end_time = moment(start_time).add(event.duration, "minutes");
-					}
-					if("location" in event) {
-						loc = event.location;
-					}
-					ev.places.push({
-						"timeStr": [start_time.format("h:mm") + "-" + end_time.format("h:mm")],
-						"location": [loc],
-						"link": place.link ? place.link : null
-					});
-					ev["label"] = place.label;
-				}
-				eventsToPush.push(ev);
-			} else {
-				eventsToPush.push({});
-			}
-			eventsToPush.forEach((e, i) => {
-				eventsToPush[i].type = event.type;
-				if("title" in event) {
-					eventsToPush[i].title = event.title;
-				}
-				if("name" in event) {
-					eventsToPush[i].name = event.name;
-				}
-				if("link" in event) {
-					eventsToPush[i].link = event.link;
-				}
-				if("recording" in event) {
-					eventsToPush[i].recording = event.recording;
-				}
-				if("location" in event) {
-					eventsToPush[i].location = event.location;
-				}
-				if("demo" in event) {
-					eventsToPush[i].demo = event.demo;
-				}
-			});
-			calendar_dates[calendarI].events = (calendar_dates[calendarI].events as any[]).concat(eventsToPush as any[]);
-			eventI++;
-		} else {
-			//Sort events in date
-			calendar_dates[calendarI].events.sort((a:any, b:any) => {
-				return typeOrder.indexOf(a.type) - typeOrder.indexOf(b.type);
-			});
-			calendarI++;
-		}
-	}
+	console.log(calendar_dates);
 	this.calendar = calendar_dates;
   }
 }
