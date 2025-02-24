@@ -9,7 +9,7 @@
 				}
 		},
 		"discussion" : {
-			"place": [
+			"places": [
 				{
 					"time": "12:00",
 					"duration": "50",
@@ -28,42 +28,42 @@
 			]
 		},
 		"officehours_daniel": {
+			"title": "Professor Epstein Office Hours",
 			"place": {
 					"time": "13:00",
 					"duration": "60",
-					"label": "Professor Epstein Office Hours",
 					"location": "DBH 6093"
 				}
 		},
 		"officehours_sohyeon": {
+			"title": "Sohyeon Office Hours",
 			"place": {
 					"time": "11:00",
 					"duration": "60",
-					"label": "Sohyeon Office Hours",
 					"location": "DBH 5221"
 				}
 		},
 		"officehours_weijun": {
+			"title": "Weijun Office Hours",
 			"place": {
 					"time": "16:00",
 					"duration": "60",
-					"label": "Weijun Office Hours",
 					"location": "DBH 5221"
 				}
 		},
 		"officehours_ziqi": {
+			"title": "Ziqi Office Hours",
 			"place": {
 					"time": "14:00",
 					"duration": "60",
-					"label": "Ziqi Office Hours",
 					"location": "DBH 5221"
 				}
 		},
 		"officehours_emily": {
+			"title": "Emily Office Hours",
 			"place": {
 					"time": "15:00",
 					"duration": "60",
-					"label": "Emily Office Hours",
 					"location": "Zoom",
 					"link": "https://uci.zoom.us/j/91759281801"
 				}
