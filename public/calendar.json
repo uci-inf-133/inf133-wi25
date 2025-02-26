@@ -382,7 +382,8 @@
 			"type": "lecture",
 			"title": "Device Resources & Sensors",
 			"link": "lectures/02_25_25-device_resources.pdf",
-			"demo": "demos/02_25_25-device_resources.zip"
+			"demo": "demos/02_25_25-device_resources.zip",
+			"recording": "https://uci.yuja.com/V/Video?v=12460767&a=83417891"
 		},
 		{
 			"date": "2025-02-25",
@@ -397,7 +398,11 @@
 			"type": "lecture",
 			"title": "Databases and Local Storage",
 			"link": "lectures/02_27_25-databases.pdf",
-			"demo": "demos/02_27_25-databases.zip"
+			"demo": "demos/02_27_25-databases.zip",
+			"place": {
+				"time": "08:30",
+				"duration": "50"
+			}
 		},
 		{
 			"date": "2025-02-27",
