@@ -457,7 +457,7 @@
 		{
 			"date": "2025-03-07",
 			"type": "discussion",
-			"title": "TA Office Hours (Sohyeon)"
+			"title": "TA Office Hours (Sohyeon, Weijun, Ziqi)"
 		},
 		{
 			"date": "2025-03-10",
@@ -470,7 +470,8 @@
 		{
 			"date": "2025-03-11",
 			"type": "lecture",
-			"title": "Prototyping in Research"
+			"title": "Prototyping in Research",
+			"link": "lectures/03_11_25-prototyping.pdf"
 		},
 		{
 			"date": "2025-03-11",
@@ -483,7 +484,8 @@
 		{
 			"date": "2025-03-13",
 			"type": "lecture",
-			"title": "Wrap-up"
+			"title": "Wrap-up",
+			"link": "lectures/03_13_25-wrap_up.pdf"
 		},
 		{
 			"date": "2025-03-13",
@@ -492,13 +494,14 @@
 		{
 			"date": "2025-03-14",
 			"type": "discussion",
-			"title": "TBD"
+			"title": "TA Office Hours (Weijun, Ziqi, Sohyeon)"
 		},
 		{
 			"date": "2025-03-19",
 			"type": "assignment",
 			"title": "A5",
-			"name": "Beyond Web & Mobile"
+			"name": "Beyond Web & Mobile",
+			"link": "assignments/a5"
 		}
 	]
 }
