@@ -450,15 +450,15 @@
 		},
 		{
 			"date": "2025-03-07",
+			"type": "discussion",
+			"title": "TA Office Hours (Sohyeon, Weijun, Ziqi)"
+		},
+		{
+			"date": "2025-03-10",
 			"type": "assignment",
 			"title": "A4",
 			"name": "Sleep Tracker in Ionic",
 			"link": "assignments/a4"
-		},
-		{
-			"date": "2025-03-07",
-			"type": "discussion",
-			"title": "TA Office Hours (Sohyeon, Weijun, Ziqi)"
 		},
 		{
 			"date": "2025-03-10",
