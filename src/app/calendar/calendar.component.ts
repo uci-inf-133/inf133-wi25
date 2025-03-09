@@ -19,9 +19,14 @@ export class CalendarComponent {
   }
 
   //https://stackoverflow.com/questions/24500375/get-clients-gmt-offset-in-javascript
-  getTimezoneOffset() {
+  //Pass in the date you're trying to get the offset for, to account for daylight savings
+  getTimezoneOffset(dateStr:string) {
+	let date = new Date();
+	if(dateStr) {
+		date = new Date(dateStr);
+	}
 	function z(n:any){return (n<10? '0' : '') + n}
-	var offset = new Date().getTimezoneOffset();
+	var offset = date.getTimezoneOffset();
 	var sign = offset < 0? '+' : '-';
 	offset = Math.abs(offset);
 	return sign + z(offset/60 | 0) + z(offset%60);
@@ -33,9 +38,8 @@ export class CalendarComponent {
     let events:any[] = calendar['events'];
 	this.defaults = calendar['defaults'];
     //Add date string to each event, specify that they're in Pacific time zone
-	//There's potentially some mess involving Daylight Savings, but hopefully that's dealt with...
     events = events.map((event) => {
-		event.date = new Date(event.date + " GMT" + this.getTimezoneOffset());
+		event.date = new Date(event.date + " GMT" + this.getTimezoneOffset(event.date));
 		return event;
 	});
 
