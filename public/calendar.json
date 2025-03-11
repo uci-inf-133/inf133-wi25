@@ -500,11 +500,19 @@
 			"title": "TA Office Hours (Weijun, Ziqi, Sohyeon)"
 		},
 		{
+			"date": "2025-03-17",
+			"type": "officehours_emily"
+		},
+		{
 			"date": "2025-03-19",
 			"type": "assignment",
 			"title": "A5",
 			"name": "Beyond Web & Mobile",
 			"link": "assignments/a5"
+		},
+		{
+			"date": "2025-03-19",
+			"type": "officehours_ziqi"
 		}
 	]
 }
